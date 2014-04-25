@@ -1,53 +1,38 @@
-// // FONTS
-// // --------------------------------------------------
+// FONTS
+// --------------------------------------------------
 
-// #font {
-//   #family {
-//     .serif() {
-//       font-family: @font-family-serif;
-//     }
-//     .sans-serif() {
-//       font-family: @font-family-sans-serif;
-//     }
-//     .monospace() {
-//       font-family: @font-family-monospace;
-//     } 
-//   }// #family
-//   .shorthand(@size: @font-size-base, @weight: 400, @lineHeight: @line-height-base) {
-//     font-size: @size;
-//     font-weight: @weight;
-//     line-height: @lineHeight;
-//   }
-//   .serif(@size: @font-size-base, @weight: 400, @lineHeight: @line-height-base) {
-//     #font > #family > .serif;
-//     #font > .shorthand(@size, @weight, @lineHeight);
-//   }
-//   .sans-serif(@size: @font-size-base, @weight: 400, @lineHeight: @line-height-base) {
-//     #font > #family > .sans-serif;
-//     #font > .shorthand(@size, @weight, @lineHeight);
-//   }
-//   .monospace(@size: @font-size-base, @weight: 400, @lineHeight: @line-height-base) {
-//     #font > #family > .monospace;
-//     #font > .shorthand(@size, @weight, @lineHeight);
-//   }
-// }
+@mixin shorthand ( $size: $font-size-base, $weight: $book, $lineHeight: $line-height-base ) {
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $lineHeight;
+}
+
+@mixin sans-serif ( $size: $font-size-base, $weight: $book, $lineHeight: $line-height-base ) {
+	@include shorthand($size, $weight, $lineHeight);
+	font-family: $font-family-sans-serif;
+}
+
+@mixin sans-headline ( $size: $font-size-base, $weight: $book, $lineHeight: $line-height-base ) {
+	@include shorthand($size, $weight, $lineHeight);
+	font-family: $font-family-sans-serif-headline;
+}
 
 
 // // HTML5 BOILERPLATE MIXINS
 // // --------------------------------------------------
 	
-// 	/* For image replacement */
-// 	.ir {
-// 		background-color: transparent;
-// 		background-repeat: no-repeat;
-// 		border: 0;
-// 		direction: ltr;
-// 		display: block;
-// 		overflow: hidden;
-// 		text-align: left;
-// 		text-indent: -999em;
-// 		}
-// 	.ir br { display: none; }
+	/* For image replacement */
+	.ir {
+		background-color: transparent;
+		background-repeat: no-repeat;
+		border: 0;
+		direction: ltr;
+		display: block;
+		overflow: hidden;
+		text-align: left;
+		text-indent: -999em;
+		}
+	.ir br { display: none; }
 	
 // 	/* Hide from both screenreaders and browsers: h5bp.com/u */
 // 	.hidden { 
@@ -86,28 +71,23 @@
 //   	list-style: none;
 // 		}
 		
-// 	.happyfont {
-// 		-webkit-font-smoothing: antialiased;
-// 	}
+	.happyfont {
+		-webkit-font-smoothing: antialiased;
+	}
 	
-// 	.override_gradient_vertical() {
-// 	  background-color:transparent;
-// 	  background-image: none;
-// 	  background-image: none;
-// 	  background-image: none;
-// 	  background-image: none;
-// 	  background-image: none;
-// 	  background-image: none;
-// 	  background-repeat: no-repeat;
-// 	  filter: none;
-// 	}
+	.override_gradient_vertical {
+	  background-color:transparent;
+	  background-image: none;
+	  background-repeat: no-repeat;
+	  filter: none;
+	}
 	
-// 	.backgroundCover {
-// 		background-position: center top;
-// 		-moz-background-size: cover;
-// 		background-size: cover;
-// 		background-repeat: no-repeat;
-// 	}
+	.background-cover {
+		background-position: center top;
+		-moz-background-size: cover;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 	
 	
 // 	// Vertical Align with display:tables
@@ -131,26 +111,26 @@
   	
 //   	--------------------------------------------------------
 	
-// 	.valign-hldr {
-// 		display: block;
-// 		height: 100%;
-// 		position: absolute;
-// 			top: 0;
-// 			left: 0;
-// 		width: 100%;
-// 	}
+	.valign-hldr {
+		display: block;
+		height: 100%;
+		position: absolute;
+			top: 0;
+			left: 0;
+		width: 100%;
+	}
 	
-// 	.valign-table {
-// 		display: table;
-// 		height: 100%;
-// 		width: 100%;
-// 	}
+	.valign-table {
+		display: table;
+		height: 100%;
+		width: 100%;
+	}
 	
-// 	.valign-cell {
-// 		display: table-cell;
-// 		text-align: center;
-// 		vertical-align: middle;
-// 	}
+	.valign-cell {
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
 	
 	
 	
@@ -185,80 +165,91 @@
 
 
 
-// 	/* ! IE 6 Warning */
-// 	/* ======================================================= */	
+	/* ! IE 6 Warning */
+	/* ======================================================= */	
 		
-// 		#_l { z-index: 10000; }
+		#_l { z-index: 10000; }
 		
-// 		#_d {
-// 			height: 280px !important;
-// 			padding-right: 0 !important;
-// 			width: 690px !important;
-// 			z-index: 100001;
-// 			ul {
-// 				margin: 0 !important;
-// 				padding: 0 !important;
-// 				li {
-// 					float: left !important;
-// 					&#_li5 { margin-right: 0 !important; }
-// 				}
-// 			}
-// 		}
+		#_d {
+			height: 280px !important;
+			padding-right: 0 !important;
+			width: 690px !important;
+			z-index: 100001;
+			ul {
+				margin: 0 !important;
+				padding: 0 !important;
+				li {
+					float: left !important;
+					&#_li5 { margin-right: 0 !important; }
+				}
+			}
+		}
 
 
-// 	/* ! IE Specific */
-// 	/* ======================================================= */	
-// 	.lt-ie8 {
+	/* ! Browser Width */
+	/* ======================================================= */
+	#width {
+		@include box-shadow(none);
+		border-color: transparent;
+		background-color: rgba(0, 0, 0, .5);
+		margin-bottom: 0;
+		@include opacity(1);
+		padding: .2em .5em;
+		position: fixed;
+			left: 10px;
+			bottom: 10px;
+		@include transition(opacity .3s ease-out);
+		width: auto;
+		z-index: 9000;
 		
-// 	}
-	
-	
-// 	/* ! Browser Width */
-// 	/* ======================================================= */
-// 	#width {
-// 		.box-shadow(0 0 4px rgba(0,0,0,.25));
-// 		background-color: rgba(217,237,247, .9);
-// 		border-color: rgba(217,237,247, .9);
+		p {
+			color: #fff;
+			font-size: .9em;
+			margin: 0; 
+			padding: 0;
+			text-align: center;
+			&:after { display: none; }
+		}
+
+		&:hover {
+			@include opacity(1);
+			p:after { display: inline-block; }
+		}
 		
-// 		.box-shadow(none);
-// 		border-color: transparent;
-// 		background-color: transparent;
-// 		.opacity(.9);
-// 		padding: .2em .5em;
-// 		position: fixed;
-// 			left: 0;
-// 			top: 0;
-// 		width: auto;
-// 		z-index: 9000;
-		
-// 		p {
-// 			color: #000;
-// 			font-size: .9em;
-// 			margin: 0; 
-// 			padding: 0;
-// 			text-align: center;
-// 			text-shadow: 1px 1px 0 rgba(255,255,255,.6);
-// 		}
-		
-// 	}
+	}
 	
-// 	@media (max-width: @screen-xs-max) {
-// 		#width p:after { content: " @screen-xs-max [< 480px]";  } 
-// 	}
+	@media (max-width: ($screen-xs-min - 1) ) {
+		#width p { color: $brand-primary; }
+		#width p:after {
+				content: " |  $screen-xs-min - 1 [<= 479px]";  
+		} 
+	}
 	
-// 	@media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
-// 		#width p:after { content: " @screen-xs-min [480px - 767px]";  } 
-// 	}
+	@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+		#width p { color: $brand-success; }
+		#width p:after { 
+				content: " |  $screen-xs-min - $screen-xs-max [480px - 767px]";  
+		} 
+	}
 	
-// 	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-//     #width p:after { content: " @screen-sm-min [768px - 991px]";  } 
-//   }
-  
-//   @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-//     #width p:after { content: " @screen-md-min [992px - 1199px]";  } 
-//   }
-  
-//   @media (min-width: @screen-lg-min) {
-//     #width p:after { content: " @screen-lg-min [> 1200px]";  } 
-//   }
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		#width p { color: $brand-info; }
+    	#width p:after { 
+    		content: " |  $screen-sm-min - $screen-sm-max [768px - 991px]"; 
+    	}
+	}
+
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+		#width p { color: $brand-warning; }
+		#width p:after { 
+			content: " |  $screen-md-min - $screen-md-max [992px - 1199px]"; 
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+		#width p { color: purple; }
+		#width p:after {
+			content: " |  $screen-lg-min [> 1200px]"; 
+		}
+	}
 

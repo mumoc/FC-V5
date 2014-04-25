@@ -5,7 +5,7 @@
  * http://switch.is
 */
 
-// @codekit-prepend "jquery-1.10.2.min.js", "bootstrap-select.min.js", "bootstrap-checkbox.js", "moment.min.js", "bootstrap-datetimepicker.min.js", "jquery.sidr.min.js", "bootstrap.min.js", "geoPosition.js", "script-geolocation.js";
+// @codekit-prepend "jquery-1.10.2.min.js", "bootstrap.min.js", "skrollr.js";
 
 $(document).ready(function(){
 
@@ -25,112 +25,168 @@ $(document).ready(function(){
 	/* End Dev Width ========================================= */
 
 
-	/* ! Reposition Elements */
-	/* clone and insert the elements for mobil versions */
+	/* ! Expanding CTAs */
 	/* ======================================================= */
-
-		/* Locations Reposition Elements */
-		if ( $("body").hasClass("locations") ) {
-
-			var cloned = false;
-			function reposition_location() {
-
-				if ( $('#js-media-test').css("position") == "static" && cloned == false ) {
-
-					$("#location-contact-buttons").clone()
-												  .insertAfter("#location-navbar")
-												  .attr("id", "location-contact-buttons-cloned")
-												  .removeClass();
-					$("#location-cta").clone()
-									 .insertAfter("#location-photo-header")
-									 .attr("id", "location-cta-cloned")
-									 .addClass("cloned");
-
-					$("#location-description").clone()
-											  .insertAfter("#map")
-											  .attr("id", "location-description-cloned");
-
-					cloned = true;
-				}
+	if ($(".expanding-buckets").length) {
+		$(".expanding-bucket").hover(
+			function(){
+				$(this).addClass("expand");
+				$(this).siblings(".expanding-bucket").addClass("contract");
+			},
+			function(){
+				$(this).removeClass("expand");
+				$(this).siblings(".expanding-bucket").removeClass("contract");
 			}
-			
-			reposition_location();
-			
-			$(window).resize(reposition_location);
-		}
-		/* ======================================================= */
+		);
+	}
+	/* End Expanding CTAs ==================================== */
 
 
-		/* Banquets Reposition Elements */
-		if ( $("body").hasClass("banquets") ) {
-
-			var cloned = false;
-			function reposition_banquets() {
-				if ( $('#js-media-test').css("position") == "static" && cloned == false ) {
-					$(".section-header-well").addClass('hidden-xs')
-											 .clone()
-											 .insertAfter("#banquests-ctas")
-											 .addClass("visible-xs").removeClass('hidden-xs');
-					
-					cloned = true;
-				}
-			}
-			
-			reposition_banquets();
-			
-			$(window).resize(reposition_banquets);
-		}
-		/* ======================================================= */
-	
-
+	/* ! Sockstagram / Parallax */
 	/* ======================================================= */
-
-	
-	/* ! SIDR - Sidebar Responsive */
-	/* http://www.berriart.com/sidr/ */
-	/* ======================================================= */
-	$('#responsive-menu-button').sidr({
-      name: 'sidr-main',
-      renaming: false,
-      source: '#main-nav'
-    });
-    $("#responsive-menu-button-close a").click(function(e){
-    	e.preventDefault();
-    	 $.sidr('close', 'sidr-main');
-    });
-
-
-
-	/* ! Forms */
-	/* ======================================================= */
-	$('.selectpicker').selectpicker();
-	$('input.checkbox').checkbox({
-		checkedClass: 'fa fa-check-square-o',
-		uncheckedClass: 'fa fa-square-o'
-	});
-	$('.datepicker').datetimepicker({
-		pickTime: false,
-		startDate: (new Date())
-	});
-
-	$(".timepicker").datetimepicker({
-		pickDate: false
-	});
+	var s = skrollr.init();
+	/* End Sockstagram / Parallax ============================= */
 
 
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+global = {
+    siteUrl: "http://10.0.1.21/ynh/schoolrunner/",
+    speed: 500,
+    ease: "easeInOutExpo",
+    mobileMax: 580,
+    tabletMin: 581,
+    tabletMax: 1010,
+    desktopMin: 1011,
+    desktopMax: 1200,
+    desktopLargeMin: 1201,
+    desktopLargeMax: 2E3
+};
+select = {
+    html: $("html"),
+    body: $("body"),
+    htmlBody: $("html, body"),
+    window: $(window),
+    masthead: $("#home-icons-hldr"),
+    mastheadShapes: $(".masthead-shapes")
+};
+device = {
+    mobile: select.window.width() <= global.mobileMax,
+    tablet: select.window.width() > global.mobileMax && select.window.width() <= global.tabletMax,
+    desktop: select.window.width() > global.desktopMin && select.window.width() <= global.desktopMax,
+    desktopLarge: select.window.width() > global.desktopLargeMin && select.window.width() <= global.desktopLargeMax,
+    desktopMax: select.window.width() > global.desktopLargeMax,
+    redefineObject: function () {
+        device.mobile = select.window.width() <= global.mobileMax;
+        device.tablet = select.window.width() >
+            global.mobileMax && select.window.width() <= global.tabletMax;
+        device.desktop = select.window.width() > global.desktopMin && select.window.width() <= global.desktopMax;
+        device.desktopLarge = select.window.width() > global.desktopLargeMin && select.window.width() <= global.desktopLargeMax;
+        device.desktopMax = select.window.width() > global.desktopLargeMax
+    }
+};
+ui = {
+buildMastheadAssets: function (c, b, e) {
+	console.log("hello");
+    var a = "asset-1 asset-2 asset-3 asset-4 asset-5 asset-6 asset-7 asset-8 asset-9 asset-10 asset-11 asset-12 asset-13 asset-14".split(" "),
+        d = utility.shuffle(a),
+        f = [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90],
+        g = utility.shuffle(f),
+        l = "anim-rise-asset";
+    device.mobile && (l = "anim-rise-asset-mobile");
+    for (var n = 0; n < c; n++) {
+        var m = (12 * Math.random() + 10).toFixed(2),
+            k = (11 * Math.random() +
+                1).toFixed(2);
+        select.masthead.append("<div class='masthead-asset size-large " + d[n] + " " + l + "' style='left:" + g[n] + "%; -webkit-animation-duration:" + m + "s; -moz-animation-duration:" + m + "s; animation-duration:" + m + "s; -webkit-animation-delay:" + k + "s; -moz-animation-delay:" + k + "s; animation-delay:" + k + "s;'></div>")
+    }
+    d = utility.shuffle(a);
+    g = utility.shuffle(f);
+    for (c = 0; c < b; c++) m = (12 * Math.random() + 10).toFixed(2), k = (11 * Math.random() + 1).toFixed(2), select.masthead.append("<div class='masthead-asset size-medium " + d[c] +
+        " " + l + "' style='left:" + (g[c] + 5) + "%; -webkit-animation-duration:" + m + "s; -moz-animation-duration:" + m + "s; animation-duration:" + m + "s; -webkit-animation-delay:" + k + "s; -moz-animation-delay:" + k + "s; animation-delay:" + k + "s;'></div>");
+    d = utility.shuffle(a);
+    g = utility.shuffle(f);
+    for (b = 0; b < e; b++) m = (12 * Math.random() + 10).toFixed(2), k = (11 * Math.random() + 1).toFixed(2), select.masthead.append("<div class='masthead-asset size-small " + d[b] + " " + l + "' style='left:" + (g[b] + -5) + "%; -webkit-animation-duration:" + m + "s; -moz-animation-duration:" +
+        m + "s; animation-duration:" + m + "s; -webkit-animation-delay:" + k + "s; -moz-animation-delay:" + k + "s; animation-delay:" + k + "s;'></div>")
+}
+};
+utility = {
+    window: {
+        checkWindowSize: function () {
+            device.mobile ? select.html.addClass("mobile") : select.html.removeClass("mobile");
+            device.tablet ? select.html.addClass("tablet") : select.html.removeClass("tablet");
+            device.desktop ? select.html.addClass("desktop") : select.html.removeClass("desktop");
+            device.desktopLarge ? select.html.addClass("desktop-large") : select.html.removeClass("desktop-large");
+            device.desktopMax ? select.html.addClass("desktop-max") : select.html.removeClass("desktop-max")
+        },
+        resizeMastheadObjects: function () {
+            select.window.width();
+            select.window.height()
+        }
+    },
+    checkBrowsers: function () {
+        Modernizr.addTest("firefox", function () {
+            return !!navigator.userAgent.match(/firefox/i)
+        });
+        Modernizr.addTest("ios", function () {
+            return !!navigator.userAgent.match(/(iPad|iPhone|iPod)/g)
+        })
+    },
+    shuffle: function (c) {
+        for (var b = c.length - 1; 0 < b; b--) {
+            var e = Math.floor(Math.random() * (b + 1)),
+                a = c[b];
+            c[b] = c[e];
+            c[e] = a
+        }
+        return c
+    },
+    animationRandomDelay: function (c) {
+        $(this).each(function () {
+            var b = (Math.random() * (c.data.rangeMax - c.data.rangeMin) + c.data.rangeMin).toFixed(2);
+            $(this).attr("style",
+                "-webkit-animation-delay:" + b + "s; -moz-animation-delay:" + b + "s; animation-delay:" + b + "s;")
+        })
+    },
+    modernizrTests: function () {
+        Modernizr.addTest("ipad", function () {
+            return !!navigator.userAgent.match(/iPad/i)
+        });
+        Modernizr.addTest("iphone", function () {
+            return !!navigator.userAgent.match(/iPhone/i)
+        });
+        Modernizr.addTest("ipod", function () {
+            return !!navigator.userAgent.match(/iPod/i)
+        });
+        Modernizr.addTest("appleios", function () {
+            return Modernizr.ipad || Modernizr.ipod || Modernizr.iphone
+        })
+    }
+};
+init = {
+    everything: function () {
+        utility.window.checkWindowSize();
+        utility.checkBrowsers();
+        utility.modernizrTests();
+        device.mobile && Modernizr.cssanimations ? ui.buildMastheadAssets(0, 3, 5) : device.tablet || device.desktop && Modernizr.cssanimations ? ui.buildMastheadAssets(1, 4, 6) : Modernizr.cssanimations && ui.buildMastheadAssets(3, 4, 5);
+        Modernizr.svg || (select.svgImg.each(function () {
+            var c = $(this).data("fallback");
+            $(this).attr("src",
+                c)
+        }), select.svgAsset.remove());
+        Modernizr.appleios && select.svgImg.each(function () {
+            var c = $(this).data("ios");
+            $(this).attr("src", c)
+        })
+    }
+};
+$(window).resize(function () {
+    device.redefineObject();
+    utility.window.checkWindowSize();
+    utility.window.resizeMastheadObjects()
+});
+window.onload = function () {};
+$(document).ready(function () {
+	console.log("loaded");
+    init.everything()
+});

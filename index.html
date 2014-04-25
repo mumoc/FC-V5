@@ -16,50 +16,75 @@
 		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 		<script type="text/javascript" src="//use.typekit.net/czm5tyq.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-		<script src="assets/js/min/modernizer-ck.js"></script>
+		<script src="assets/js/min/modernizr-ck.js"></script>
 		
 		<!-- Fav and touch icons -->
-		<link rel="shortcut icon" href="{site_url}assets/ico/favicon.ico">
-		<link rel="apple-touch-icon" sizes="57x57" href="assets/ico/apple-touch-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="assets/ico/apple-touch-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="assets/ico/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="assets/ico/apple-touch-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="assets/ico/apple-touch-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="assets/ico/apple-touch-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="assets/ico/apple-touch-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="assets/ico/apple-touch-icon-152x152.png">
-		<link rel="icon" type="image/png" href="assets/ico/favicon-196x196.png" sizes="196x196">
-		<link rel="icon" type="image/png" href="assets/ico/favicon-160x160.png" sizes="160x160">
-		<link rel="icon" type="image/png" href="assets/ico/favicon-96x96.png" sizes="96x96">
-		<link rel="icon" type="image/png" href="assets/ico/favicon-16x16.png" sizes="16x16">
-		<link rel="icon" type="image/png" href="assets/ico/favicon-32x32.png" sizes="32x32">
-		<meta name="msapplication-TileColor" content="#be1e2d">
-		<meta name="msapplication-TileImage" content="assets/ico/mstile-144x144.png">
-		<meta name="msapplication-square70x70logo" content="assets/ico/mstile-70x70.png">
-		<meta name="msapplication-square144x144logo" content="assets/ico/mstile-144x144.png">
-		<meta name="msapplication-square150x150logo" content="assets/ico/mstile-150x150.png">
-		<meta name="msapplication-square310x310logo" content="assets/ico/mstile-310x310.png">
-		<meta name="msapplication-wide310x150logo" content="assets/ico/mstile-310x150.png">
+		<link rel="shortcut icon" href="/assets/ico/favicon.ico">
+		<link rel="apple-touch-icon" sizes="57x57" href="/assets/ico/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/assets/ico/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/assets/ico/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/assets/ico/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/assets/ico/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/assets/ico/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/assets/ico/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/assets/ico/apple-touch-icon-152x152.png">
+		<link rel="icon" type="image/png" href="/assets/ico/favicon-196x196.png" sizes="196x196">
+		<link rel="icon" type="image/png" href="/assets/ico/favicon-160x160.png" sizes="160x160">
+		<link rel="icon" type="image/png" href="/assets/ico/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="/assets/ico/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="/assets/ico/favicon-32x32.png" sizes="32x32">
+		<meta name="msapplication-TileColor" content="#2d89ef">
+		<meta name="msapplication-TileImage" content="/assets/ico/mstile-144x144.png">
+		<meta name="msapplication-config" content="/assets/ico/browserconfig.xml">
 	</head>
 	
 	<body>
 		<!--[if lte IE 8]><script src="assets/js/ie6/warning.js"></script><script>window.onload=function(){e("assets/js/ie6/")}</script><![endif]-->
 		
 		<div id="home-hero-hldr">
-			<div class="container">
+			
+			<div id="home-icons-hldr">
+				<!-- icons added by js | Thanks http://home.schoolrunner.org ! -->
+			</div><!-- /#home-icons-hldlr -->
 
-				<header id="header" class="header">
-					<ul class="list-inline pull-right">
-						<li class="active"><a href="#">Buy Socks</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">FAQs</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
-					<h3>Foot Cardigan</h3>
-				</header>
-				
+			<header id="header" class="header">
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">Brand</a>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav pull-right">
+								<li class="dropdown active">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Buy Socks</a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Drop Down One</a></li>
+										<li><a href="#">Drop Down Two</a></li>
+									</ul>
+								</li>
+								<li><a href="#">About</a></li>
+								<li><a href="#">FAQs</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
+			</header>
+			
+
+			<div class="container-fluid">
+
 				<div id="home-hero">
-					<h1>Fantastically fantastic socks delivered to your mailbox every month!</h1>
+					<h1>Fantastically<br> fantastic socks<br> delivered to<br> your mailbox<br> every month!</h1>
 					<p>You found it. The pot of gold at the end of the rainbow. The OG. The &lsquo;ole one-two. The granpappy of them all. Willkommen to Foot Cardigan.</p>
 					<p><a href="" class="btn btn-window btn-orange">Buy A Sock Subscription</a></p>
 				</div>
@@ -68,100 +93,122 @@
 		</div><!-- / #home-hero-hldlr -->
 		
 		
-		<div class="fc-alert">
-			<div class="container">
+		<div class="fc-alert two-btns">
+			<div class="container-fluid">
 				<div class="message">
 					<p>Yo, yo, yo! Check this poopoo out! Delenit augue duis, dolore te feugait nulla facilisi nam. Facit eorum claritatem Investigationes demonstraverunt lectores, legere me lius quod ii legunt saepius. #memefail</p>
 				</div>
 				<div class="actions">
 					<a href="" class="btn btn-blue-light">Button</a>
-					<a href="" class="btn btn-blue-dark">Button</a>
+					<a href="" class="btn btn-blue-muted">Button</a>
 				</div>
 			</div>
+			<a href="" class="close">&times;</a>
 		</div><!-- / .fc-alert -->
 
 
-		<section id="cta-buckets">
+		<section class="expanding-buckets">
 
-			<article class="small-batch">
+			<article class="expanding-bucket" style="background-image: url('/assets/img/expandable-buckets-small-batch.gif')">
 		    	<div class="valign-hldr">
 		    		<div class="valign-table">
 			  			<div class="valign-cell">
 		      				<div class="valign-inside">
 								<h2>Small batch</h2>
 								<p>Commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate! Eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim</p>
-								<button class="orange-btn" name="button" type="submit">button</button>
+								<button class="btn btn-orange" name="button" type="submit">button</button>
 		            		</div><!-- /.inside -->
 		      			</div>
 		      		</div>
 		    	</div>
 			</article>
 
-			<article class="bite-sized">
+			<article class="expanding-bucket" style="background-image: url('/assets/img/expandable-buckets-bite-sized.gif')">
 		    	<div class="valign-hldr">
 		    		<div class="valign-table">
 			  		  	<div class="valign-cell">
 		            		<div class="valign-inside">
 								<h2>Bite-sized foot cardigans!</h2>
 								<p>Commodo consequat duis autem vel eum iriure dolor in hendrerit in vulputate! Eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim.</p>
-								<button class="orange-btn" name="button" type="submit">button</button>
+								<button class="btn btn-orange" name="button" type="submit">button</button>
 		              		</div><!-- /.inside -->
 		      			</div>
 		      		</div>
 		    	</div>
 			</article>
 		  
-		</section><!-- / #cta-buckets -->
+		</section> <!-- / #cta-buckets -->
 
 
 		<section id="sockstagram">
-			<div class="container">
+			<div class="container-fluid">
 				<h1>Sockstagram</h1>
 				<p>Who doesn&rsquo;t want to be an internet celebrity…on our website? Use hashtag #footcardigan when you Instagram our socks and they&rsquo;ll magically appear right here. Unless they magically suck. </p>
 			</div>
 			<div id="sockstagram-pics">
+				<img data-anchor-target="#sockstagram-pics" data-0-bottom="top: 0" data-1200-bottom="top:600px;" src="http://distilleryimage4.s3.amazonaws.com/631dac84d67611e1a7d81231381b5136_7.jpg" class="sockstagram-1">
+				<img data-anchor-target="#sockstagram-pics" data-0-bottom="top: 0" data-1500-bottom="top:400px;" src="http://distilleryimage4.s3.amazonaws.com/16fe826ee3b511e1a47b22000a1cf766_7.jpg" class="sockstagram-2 medium">
+				<img data-anchor-target="#sockstagram-pics" data-0-bottom="top: 0" data-1200-bottom="top:200px;" src="http://distilleryimage11.s3.amazonaws.com/07354ffe2f3011e2a23c22000a1f9d66_7.jpg" class="sockstagram-3">
+				<img data-anchor-target="#sockstagram-pics" data-0-bottom="top: 0" data-1500-bottom="top:400px;" src="http://distilleryimage4.s3.amazonaws.com/059c1a748e6311e1b10e123138105d6b_7.jpg" class="sockstagram-4 small">
+				<img data-anchor-target="#sockstagram-pics" data-0-bottom="top: 0" data-1200-bottom="top:500px;" src="http://distilleryimage10.s3.amazonaws.com/7ec10646ab5d11e1af7612313813f8e8_7.jpg" class="sockstagram-5">
 
+				<img data-anchor-target="#sockstagram-pics" data-0-bottom="top: 0" data-1500-bottom="top:400px;" src="http://distilleryimage4.s3.amazonaws.com/631dac84d67611e1a7d81231381b5136_7.jpg" class="sockstagram-6 medium">
+				<img data-anchor-target="#sockstagram-pics" data-0-bottom="top: 0" data-1200-bottom="top:200px;" src="http://distilleryimage4.s3.amazonaws.com/16fe826ee3b511e1a47b22000a1cf766_7.jpg" class="sockstagram-7">
+				<img data-anchor-target="#sockstagram-pics" data-0-bottom="top: 0" data-1500-bottom="top:500px;" src="http://distilleryimage11.s3.amazonaws.com/07354ffe2f3011e2a23c22000a1f9d66_7.jpg" class="sockstagram-8 small">
+				<img data-anchor-target="#sockstagram-pics" data-0-bottom="top: 0" data-1200-bottom="top:500px;" src="http://distilleryimage4.s3.amazonaws.com/059c1a748e6311e1b10e123138105d6b_7.jpg" class="sockstagram-9 medium">
+				<img data-anchor-target="#sockstagram-pics" data-0-bottom="top: 0" data-1500-bottom="top:600px;" src="http://distilleryimage10.s3.amazonaws.com/7ec10646ab5d11e1af7612313813f8e8_7.jpg" class="sockstagram-10">
+
+				<img data-anchor-target="#sockstagram-pics" data-0-bottom="top: 0" data-1200-bottom="top:600px;" src="http://distilleryimage4.s3.amazonaws.com/631dac84d67611e1a7d81231381b5136_7.jpg" class="sockstagram-11">
+				<img data-anchor-target="#sockstagram-pics" data-0-bottom="top: 0" data-1500-bottom="top:400px;" src="http://distilleryimage4.s3.amazonaws.com/16fe826ee3b511e1a47b22000a1cf766_7.jpg" class="sockstagram-12 medium">
+				<img data-anchor-target="#sockstagram-pics" data-0-bottom="top: 0" data-1200-bottom="top:500px;" src="http://distilleryimage11.s3.amazonaws.com/07354ffe2f3011e2a23c22000a1f9d66_7.jpg" class="sockstagram-13">
+				<img data-anchor-target="#sockstagram-pics" data-0-bottom="top: 0" data-1500-bottom="top:400px;" src="http://distilleryimage4.s3.amazonaws.com/059c1a748e6311e1b10e123138105d6b_7.jpg" class="sockstagram-14 medium">
+				<img data-anchor-target="#sockstagram-pics" data-0-bottom="top: 0" data-1200-bottom="top:500px;" src="http://distilleryimage10.s3.amazonaws.com/7ec10646ab5d11e1af7612313813f8e8_7.jpg" class="sockstagram-15 small">
 			</div>
 		</section><!-- / #sockstagram -->
 
 
 		<section id="press">
 			<h1>Some people who said some things about us</h1>
-			<img src="" alt="">
+			<img src="/assets/img/press-logos.gif" alt="The New York Times, BuzzFeed, Men's Journal, Thrillist, Los Angeles Times">
 		</section>
 
 
 		<section id="footer-newsletter">
-			<h1>If you like where our head is at (or puppies), you’ll love our always ridiculous, rarely important, and probably life-changing emails.</h1>
+			<div class="container-fluid">
 
-			<form action="http://footcardigan.us5.list-manage.com/subscribe/post?u=3f20bcfe8c73b14efcb7d05f5&amp;id=0081869ae6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank">
-				
-				<div class="input-prepend input-append">
-            		<input class="required email" id="mce-EMAIL" type="email" name="EMAIL" placeholder="Email Address..."/>
-            		<input type="submit" value="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">
-          		</div>
-				
-				<div id="mce-responses" class="clear">
-					<div class="response" id="mce-error-response" style="display:none"></div>
-					<div class="response" id="mce-success-response" style="display:none"></div>
-				</div>
-			</form>
+				<p>If you like where our head is at (or puppies), you’ll love our always ridiculous, rarely important, and probably life-changing emails.</p>
 
+				<form action="http://footcardigan.us5.list-manage.com/subscribe/post?u=3f20bcfe8c73b14efcb7d05f5&amp;id=0081869ae6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank">
+
+					<div class="input-group">
+						<input id="mce-EMAIL" type="email" name="EMAIL" placeholder="Email Address..." class="required email form-control">
+						<span class="input-group-btn">
+							<button class="btn btn-blue-light" value="submit" type="submit" name="subscribe" id="mc-embedded-subscribe" >Submit</button>
+						</span>
+					</div><!-- /input-group -->
+
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>
+				</form>
+
+			</div>
 		</section><!-- / #footer-newsletter -->
 
 
 		<section id="footer-social">
-			<a href="https://twitter.com/footcardigan" class="btn btn-social"><i class="fa fa-twitter">Twitter</i></a>
-			<a href="https://www.facebook.com/footcardigan" class="btn btn-social"><i class="fa fa-facebook">Facebook</i></a>
-			<a href="http://instagram.com/footcardigan" class="btn btn-social"><i class="fa fa-instagram">Instagram</i></a>
-			<a href="http://www.pinterest.com/footcardigan/" class="btn btn-social"><i class="fa fa-pinteres">Pinterest</i></a>
+			<a href="https://twitter.com/footcardigan" class="btn btn-social"><i class="social-logo twitter"></i> Twitter</a>
+			<a href="https://www.facebook.com/footcardigan" class="btn btn-social"><i class="social-logo facebook"></i> Facebook</a>
+			<a href="http://instagram.com/footcardigan" class="btn btn-social"><i class="social-logo instagram"></i> Instagram</a>
+			<a href="http://www.pinterest.com/footcardigan/" class="btn btn-social"><i class="social-logo pinteres"></i> Pinterest</a>
 		</section> <!-- /#footer-social -->
 
 
 		<footer id="footer">
-			<ul>
+			<ul class="list-inline">
 				<li>©2014 Foot Cardigan</li>
-				<li>All Rights Reserved</li> 
+				<li>All Rights Reserved</li>
 				<li><a href="">Privacy Policy</a></li>
 				<li><a href="">Other Policies</a></li>
 				<li><a href="">Print a Gift Certificate</a></li>
@@ -170,7 +217,7 @@
 
 
 		<div id="js-media-test" class="hide"></div>
-		<script src="{site_url}assets/js/min/script-ck.js"></script>
+		<script src="assets/js/min/script-ck.js"></script>
 
 
 	</body>
