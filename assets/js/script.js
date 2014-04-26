@@ -5,11 +5,11 @@
  * http://switch.is
 */
 
-// @codekit-prepend "jquery-1.10.2.min.js", "bootstrap.min.js", "skrollr.js";
+// @codekit-prepend "jquery-1.10.2.min.js", "bootstrap.min.js", "skrollr.js", "jquery.sidr.min.js", "idangerous.swiper.js";
 
 $(document).ready(function(){
 
-	/* ! Dev Width */
+	/* Dev Width */
 	/* ======================================================= */
 	function whatWidth() {
 		if (!$("#width").length) {
@@ -25,7 +25,7 @@ $(document).ready(function(){
 	/* End Dev Width ========================================= */
 
 
-	/* ! Expanding CTAs */
+	/* Expanding CTAs */
 	/* ======================================================= */
 	if ($(".expanding-buckets").length) {
 		$(".expanding-bucket").hover(
@@ -42,14 +42,70 @@ $(document).ready(function(){
 	/* End Expanding CTAs ==================================== */
 
 
-	/* ! Sockstagram / Parallax */
+	/* Sockstagram / Parallax */
 	/* ======================================================= */
 	var s = skrollr.init();
 	/* End Sockstagram / Parallax ============================= */
 
 
+	/* Sockstagram / Swipe Gallery */
+	/* ======================================================= */
+	var cloned = false;
+	function showgallery() {
+		if ( $('#js-media-test').css("position") == "relative" && cloned == false ) {
+			$("#sockstagram img").each(function(e){
+				// clone the images
+				var clone = $(this).clone().appendTo("#sockstagram-gallery .swiper-wrapper");
+
+				// wash the images clean
+				clone.removeAttr("data-anchor-target")
+					 .removeAttr("data-0-bottom")
+					 .removeAttr("data-1200-bottom")
+					 .removeAttr("data-1500-bottom")
+					 .removeAttr("style")
+					 .removeClass();
+
+				// add new markup
+				clone.wrap("<div class='swiper-slide'></div>");
+
+				// start the gallery
+				var mySwiper = $('.swiper-container').swiper({
+    								mode:'horizontal',
+    								loop: true,
+    								calculateHeight: true,
+    								keyboardControl: true,
+    								mousewheelControl: true
+    							});
+
+				$("#sockstagram-prev").click(function(e) { e.preventDefault(); mySwiper.swipePrev(); });
+				$("#sockstagram-next").click(function(e) { e.preventDefault(); mySwiper.swipeNext(); });
+
+			});
+			cloned = true;
+		}
+	}
+	
+	showgallery();
+	
+	$(window).resize(showgallery);
+	/* End Sockstagram / Swipe Gallery ======================= */
+
+
+	/* ! SIDR */
+	/* ======================================================= */
+	$('#responsive-nav-button').sidr({
+		name: 'sidr-main',
+		side: 'right',
+		source: '#nav'
+	});
+	/* End SIDR ============================================== */
+
 });
 
+
+/* Homepage Icons Scroll */
+/* http://home.schoolrunner.org */
+/* ======================================================= */
 global = {
     siteUrl: "http://10.0.1.21/ynh/schoolrunner/",
     speed: 500,
@@ -190,3 +246,4 @@ $(document).ready(function () {
 	console.log("loaded");
     init.everything()
 });
+/* End Homepage Icons Scroll  ============================= */
