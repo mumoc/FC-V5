@@ -45,7 +45,7 @@ $(document).ready(function(){
 	if ($("html").hasClass("no-touch")) {
 		var s = skrollr.init();
 	} else {
-		buildgallery();
+		console.log("touch");
 	}
 	/* End Sockstagram / Parallax ============================= */
 
@@ -55,42 +55,38 @@ $(document).ready(function(){
 	var cloned = false;
 	function showgallery() {
 		if ( $('#js-media-test').css("position") == "relative" && cloned == false ) {
-			buildgallery();
+			$("#sockstagram img").each(function(e){
+				// clone the images
+				var clone = $(this).clone().appendTo("#sockstagram-gallery .swiper-wrapper");
+
+				// wash the images clean
+				clone.removeAttr("data-anchor-target")
+					 .removeAttr("data-0-bottom")
+					 .removeAttr("data-1200-bottom")
+					 .removeAttr("data-1500-bottom")
+					 .removeAttr("style")
+					 .removeClass();
+
+				// add new markup
+				clone.wrap("<div class='swiper-slide'></div>");
+
+				// start the gallery
+				var mySwiper = $('.swiper-container').swiper({
+    								mode:'horizontal',
+    								loop: true,
+    								calculateHeight: true,
+    								keyboardControl: true,
+    								mousewheelControl: true
+    							});
+
+				$("#sockstagram-prev").click(function(e) { e.preventDefault(); mySwiper.swipePrev(); });
+				$("#sockstagram-next").click(function(e) { e.preventDefault(); mySwiper.swipeNext(); });
+
+			});
+			cloned = true;
 		}
 	}
 	
-	function buildgallery() {
-		$("#sockstagram img").each(function(e){
-			// clone the images
-			var clone = $(this).clone().appendTo("#sockstagram-gallery .swiper-wrapper");
-
-			// wash the images clean
-			clone.removeAttr("data-anchor-target")
-				 .removeAttr("data-0-bottom")
-				 .removeAttr("data-1200-bottom")
-				 .removeAttr("data-1500-bottom")
-				 .removeAttr("style")
-				 .removeClass();
-
-			// add new markup
-			clone.wrap("<div class='swiper-slide'></div>");
-
-			// start the gallery
-			var mySwiper = $('.swiper-container').swiper({
-								mode:'horizontal',
-								loop: true,
-								calculateHeight: true,
-								keyboardControl: true,
-								mousewheelControl: true
-							});
-
-			$("#sockstagram-prev").click(function(e) { e.preventDefault(); mySwiper.swipePrev(); });
-			$("#sockstagram-next").click(function(e) { e.preventDefault(); mySwiper.swipeNext(); });
-
-		});
-		cloned = true;
-	}// buildgallery()
-
 	showgallery();
 	
 	$(window).resize(showgallery);
