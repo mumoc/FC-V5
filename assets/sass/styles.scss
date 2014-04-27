@@ -429,33 +429,34 @@
 		}
 
 		@-webkit-keyframes rise-asset {
-			0% {
-				-webkit-transform: translate(0,1500px);
-			}
-
-			100% {
-				-webkit-transform: translate(0, -1100px);
-			}
+			0% { -webkit-transform: translate(0,1500px); }
+			100% { -webkit-transform: translate(0, -1100px); }
 		}
 
 		@-moz-keyframes rise-asset {
-			0% {
-				-moz-transform: translate(0,1500px);
-			}
-
-			100% {
-				-moz-transform: translate(0, -1100px);
-			}
+			0% { -moz-transform: translate(0,1500px); }
+			100% { -moz-transform: translate(0, -1100px); }
 		}
 
 		@keyframes rise-asset {
-			0% {
-				transform: translate(0,1500px);
-			}
+			0% { transform: translate(0,1500px); }
+			100% { transform: translate(0, -1100px); }
+		}
 
-			100% {
-				transform: translate(0, -1100px);
-			}
+
+		@-webkit-keyframes rise-asset-mobile {
+			0% { -webkit-transform: translate(0,800px); }
+			100% { -webkit-transform: translate(0, -800px); }
+		}
+
+		@-moz-keyframes rise-asset-mobile {
+			0% { -moz-transform: translate(0,800px); }
+			100% { -moz-transform: translate(0, -800px); }
+		}
+
+		@keyframes rise-asset-mobile {
+			0% { transform: translate(0,800px); }
+			100% { transform: translate(0,-800px); }
 		}
 
 	/* End Header ------------------------------------------------------------ */
