@@ -226,15 +226,15 @@ init = {
         utility.checkBrowsers();
         utility.modernizrTests();
         device.mobile && Modernizr.cssanimations ? ui.buildMastheadAssets(0, 3, 5) : device.tablet || device.desktop && Modernizr.cssanimations ? ui.buildMastheadAssets(1, 4, 6) : Modernizr.cssanimations && ui.buildMastheadAssets(3, 4, 5);
-        Modernizr.svg || (select.svgImg.each(function () {
-            var c = $(this).data("fallback");
-            $(this).attr("src",
-                c)
-        }), select.svgAsset.remove());
-        Modernizr.appleios && select.svgImg.each(function () {
-            var c = $(this).data("ios");
-            $(this).attr("src", c)
-        })
+        // Modernizr.svg || (select.svgImg.each(function () {
+        //     var c = $(this).data("fallback");
+        //     $(this).attr("src",
+        //         c)
+        // }), select.svgAsset.remove());
+        // Modernizr.appleios && select.svgImg.each(function () {
+        //     var c = $(this).data("ios");
+        //     $(this).attr("src", c)
+        // })
     }
 };
 $(window).resize(function () {
