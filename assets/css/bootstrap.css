@@ -5862,7 +5862,8 @@ h1, h2, h3, h4, h5 {
  */
 #sockstagram {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 0; }
   #sockstagram > .container-fluid {
     position: relative;
     z-index: 100; }
@@ -6015,7 +6016,8 @@ h1, h2, h3, h4, h5 {
 #press {
   background-color: #f0f0ee;
   padding: 70px 0;
-  position: relative; }
+  position: relative;
+  z-index: 10; }
   @media (max-width: 768px) {
     #press {
       display: none; } }
