@@ -5353,7 +5353,7 @@ body {
   @media (min-width: 768px) {
     .container, .container-fluid {
       padding: 0 3%; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .container, .container-fluid {
       padding: 0 8%; } }
 
@@ -5414,7 +5414,7 @@ h1, h2, h3, h4, h5 {
 
 #js-media-test {
   position: static; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     #js-media-test {
       position: relative; } }
 
@@ -5487,7 +5487,7 @@ h1, h2, h3, h4, h5 {
   #home-hero-hldr .container-fluid {
     position: relative;
     z-index: 10; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     #home-hero-hldr {
       padding-top: 0; } }
   @media (max-width: 479px) {
@@ -5496,7 +5496,7 @@ h1, h2, h3, h4, h5 {
 
 #header {
   padding-bottom: 90px; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     #header .container-fluid {
       padding: 0; } }
   @media (max-width: 479px) {
@@ -5508,7 +5508,7 @@ h1, h2, h3, h4, h5 {
     height: 100px;
     margin: 0;
     width: 300px; }
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       #header .navbar-brand {
         display: none; } }
   #header .navbar.navbar-default {
@@ -5516,7 +5516,7 @@ h1, h2, h3, h4, h5 {
     @media (max-width: 479px) {
       #header .navbar.navbar-default {
         min-height: 50px; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     #header .navbar-header {
       margin: 0; } }
   #header .navbar-toggle {
@@ -5548,7 +5548,7 @@ h1, h2, h3, h4, h5 {
         color: #25c2eb; }
       #header ul.nav.navbar-nav > li:first-child {
         display: none; }
-        @media (max-width: 767px) {
+        @media (max-width: 768px) {
           #header ul.nav.navbar-nav > li:first-child {
             display: block; } }
       #header ul.nav.navbar-nav > li > a {
@@ -5576,7 +5576,7 @@ h1, h2, h3, h4, h5 {
   right: 0;
   width: 60%;
   z-index: 0; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     #home-icons-hldr {
       width: 100%; } }
   #home-icons-hldr .masthead-asset {
@@ -5607,7 +5607,7 @@ h1, h2, h3, h4, h5 {
     #home-icons-hldr .masthead-asset.asset-4 {
       background-position: 0 -480px; }
     #home-icons-hldr .masthead-asset.asset-5 {
-      background-position: -767px; }
+      background-position: -768px; }
     #home-icons-hldr .masthead-asset.asset-6 {
       background-position: 0 -800px; }
     #home-icons-hldr .masthead-asset.asset-7 {
@@ -5743,7 +5743,7 @@ h1, h2, h3, h4, h5 {
   font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0 0 30px -5px;
   width: 100%; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     #home-hero h1 {
       width: 100%; } }
   @media (max-width: 725px) {
@@ -5773,7 +5773,7 @@ h1, h2, h3, h4, h5 {
     #home-hero .btn-window {
       font-size: 16px;
       padding: 20px; } }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   #home-hero p {
     width: 100%; }
   #home-hero .btn-window {
@@ -5873,7 +5873,7 @@ h1, h2, h3, h4, h5 {
     padding: 60px 0;
     text-shadow: 1px 1px 0 #fff;
     text-align: center; }
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       #sockstagram h1 {
         padding: 40px 0 30px; } }
     @media (max-width: 479px) {
@@ -5886,7 +5886,7 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     text-shadow: 1px 1px 0 #fff;
     max-width: 1100px; }
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       #sockstagram p {
         font-size: 20px; } }
     @media (max-width: 479px) {
@@ -5897,7 +5897,7 @@ h1, h2, h3, h4, h5 {
     margin-top: 50px;
     position: relative;
     z-index: 0; }
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       #sockstagram #sockstagram-pics {
         display: none; } }
     @media (max-width: 991px) {
@@ -5964,7 +5964,7 @@ h1, h2, h3, h4, h5 {
     margin-top: 40px;
     padding-top: 8%;
     padding-bottom: 8%; }
-    @media (min-width: 767px) {
+    @media (min-width: 768px) {
       #sockstagram #sockstagram-gallery-hldr {
         display: none; } }
     #sockstagram #sockstagram-gallery-hldr p {
@@ -6007,7 +6007,7 @@ h1, h2, h3, h4, h5 {
   background-color: #f0f0ee;
   padding: 70px 0;
   position: relative; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     #press {
       display: none; } }
   #press h1 {
@@ -6034,7 +6034,7 @@ h1, h2, h3, h4, h5 {
 #footer-newsletter {
   background-color: #28363f;
   padding: 60px 0 70px; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     #footer-newsletter {
       padding: 40px 0 50px; } }
   #footer-newsletter p {
@@ -6148,7 +6148,7 @@ h1, h2, h3, h4, h5 {
   background-image: url("../img/footer-background.jpg");
   height: 600px;
   position: relative; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     #footer {
       height: 240px; } }
   @media (max-width: 970px) {
@@ -6163,7 +6163,7 @@ h1, h2, h3, h4, h5 {
     #footer ul > li {
       color: #fff;
       font-size: 18px; }
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         #footer ul > li {
           font-size: 14px; } }
       #footer ul > li > a {
