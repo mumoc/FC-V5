@@ -5446,7 +5446,7 @@ h1, h2, h3, h4, h5 {
         margin-right: 0; }
   @media (max-width: 1030px) {
     .fc-alert .message {
-      margin-right: 180px; }
+      margin-right: 200px; }
     .fc-alert .actions {
       width: 180px; }
       .fc-alert .actions .btn {
