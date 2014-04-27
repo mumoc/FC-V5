@@ -5886,6 +5886,9 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     text-shadow: 1px 1px 0 #fff;
     max-width: 1100px; }
+    @media (max-width: 1024px) {
+      #sockstagram p {
+        max-width: 890px; } }
     @media (max-width: 768px) {
       #sockstagram p {
         font-size: 20px; } }
@@ -5893,7 +5896,7 @@ h1, h2, h3, h4, h5 {
       #sockstagram p {
         font-size: 16px; } }
   .touch #sockstagram #sockstagram-pics {
-    display: hidden !important; }
+    display: none !important; }
   #sockstagram #sockstagram-pics {
     height: 950px;
     margin-top: 50px;

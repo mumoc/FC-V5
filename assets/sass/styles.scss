@@ -604,12 +604,13 @@
 				text-align: center;
 				text-shadow: 1px 1px 0 #fff;
 				max-width: 1100px;
+				@media (max-width: 1024px) { max-width: 890px; }
 				@media (max-width: $screen-sm) { font-size: 20px; }
 				@media (max-width: ($screen-xs-min - 1) ) { font-size: 16px; }
 			}// p
 			
 			// always hide the skrollr on touch devices
-			.touch & #sockstagram-pics { display: hidden !important; }
+			.touch & #sockstagram-pics { display: none !important; }
 
 			#sockstagram-pics {
 				height: 950px;

@@ -43,11 +43,10 @@ $(document).ready(function(){
 	/* Sockstagram / Parallax */
 	/* ======================================================= */
 	if ($("html").hasClass("no-touch")) {
-		// var s = skrollr.init();
+		var s = skrollr.init();
 	} else {
 		// console.log("touch");
 	}
-	var s = skrollr.init();
 	/* End Sockstagram / Parallax ============================= */
 
 
