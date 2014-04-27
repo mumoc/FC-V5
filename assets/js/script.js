@@ -1,8 +1,6 @@
-/* Maggianos Little Italy
+/* Foot Cardigan
  * ..........................................................................
- * http://maggianos.com/
- * designed by Switch Creative Group
- * http://switch.is
+ * http://footcardigan.com/
 */
 
 // @codekit-prepend "jquery-1.10.2.min.js", "bootstrap.min.js", "skrollr.js", "jquery.sidr.min.js", "idangerous.swiper.js";
