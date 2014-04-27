@@ -42,7 +42,11 @@ $(document).ready(function(){
 
 	/* Sockstagram / Parallax */
 	/* ======================================================= */
-	var s = skrollr.init();
+	if ($("html").hasClass("no-touch")) {
+		var s = skrollr.init();
+	} else {
+		buildgallery();
+	}
 	/* End Sockstagram / Parallax ============================= */
 
 
@@ -51,38 +55,42 @@ $(document).ready(function(){
 	var cloned = false;
 	function showgallery() {
 		if ( $('#js-media-test').css("position") == "relative" && cloned == false ) {
-			$("#sockstagram img").each(function(e){
-				// clone the images
-				var clone = $(this).clone().appendTo("#sockstagram-gallery .swiper-wrapper");
-
-				// wash the images clean
-				clone.removeAttr("data-anchor-target")
-					 .removeAttr("data-0-bottom")
-					 .removeAttr("data-1200-bottom")
-					 .removeAttr("data-1500-bottom")
-					 .removeAttr("style")
-					 .removeClass();
-
-				// add new markup
-				clone.wrap("<div class='swiper-slide'></div>");
-
-				// start the gallery
-				var mySwiper = $('.swiper-container').swiper({
-    								mode:'horizontal',
-    								loop: true,
-    								calculateHeight: true,
-    								keyboardControl: true,
-    								mousewheelControl: true
-    							});
-
-				$("#sockstagram-prev").click(function(e) { e.preventDefault(); mySwiper.swipePrev(); });
-				$("#sockstagram-next").click(function(e) { e.preventDefault(); mySwiper.swipeNext(); });
-
-			});
-			cloned = true;
+			buildgallery();
 		}
 	}
 	
+	function buildgallery() {
+		$("#sockstagram img").each(function(e){
+			// clone the images
+			var clone = $(this).clone().appendTo("#sockstagram-gallery .swiper-wrapper");
+
+			// wash the images clean
+			clone.removeAttr("data-anchor-target")
+				 .removeAttr("data-0-bottom")
+				 .removeAttr("data-1200-bottom")
+				 .removeAttr("data-1500-bottom")
+				 .removeAttr("style")
+				 .removeClass();
+
+			// add new markup
+			clone.wrap("<div class='swiper-slide'></div>");
+
+			// start the gallery
+			var mySwiper = $('.swiper-container').swiper({
+								mode:'horizontal',
+								loop: true,
+								calculateHeight: true,
+								keyboardControl: true,
+								mousewheelControl: true
+							});
+
+			$("#sockstagram-prev").click(function(e) { e.preventDefault(); mySwiper.swipePrev(); });
+			$("#sockstagram-next").click(function(e) { e.preventDefault(); mySwiper.swipeNext(); });
+
+		});
+		cloned = true;
+	}// buildgallery()
+
 	showgallery();
 	
 	$(window).resize(showgallery);
@@ -141,7 +149,6 @@ device = {
 };
 ui = {
 buildMastheadAssets: function (c, b, e) {
-	console.log("hello");
     var a = "asset-1 asset-2 asset-3 asset-4 asset-5 asset-6 asset-7 asset-8 asset-9 asset-10 asset-11 asset-12 asset-13 asset-14".split(" "),
         d = utility.shuffle(a),
         f = [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90],
@@ -241,7 +248,6 @@ $(window).resize(function () {
 });
 window.onload = function () {};
 $(document).ready(function () {
-	console.log("loaded");
     init.everything()
 });
 /* End Homepage Icons Scroll  ============================= */

@@ -86,7 +86,7 @@
 		
 		#js-media-test { 
 			position: static; 
-			@media (max-width: $screen-sm) { position: relative; }
+			@media (max-width: $screen-sm + 1) { position: relative; }
 		}
 
 	/* End Structure ------------------------------------------------------------ */
@@ -607,6 +607,9 @@
 				@media (max-width: $screen-sm) { font-size: 20px; }
 				@media (max-width: ($screen-xs-min - 1) ) { font-size: 16px; }
 			}// p
+			
+			// always hide the skrollr on touch devices
+			.touch & #sockstagram-pics { display: hidden !important; }
 
 			#sockstagram-pics {
 				height: 950px;
@@ -645,6 +648,8 @@
 			.sockstagram-14 { margin-top: 43%; left: 56%; }
 			.sockstagram-15 { margin-top: 43%; left: 28%; }
 			
+			// always show the gallery on touch devices
+			.touch & #sockstagram-gallery-hldr { display: block !important; }
 			
 			#sockstagram-gallery-hldr {
 				background-color: $off-white;
@@ -652,7 +657,7 @@
 				padding-top: 8%;
 				padding-bottom: 8%;
 
-				@media (min-width: $screen-sm) {
+				@media (min-width: $screen-sm + 1) {
 					display: none;
 				}
 
@@ -689,6 +694,7 @@
 
 				&.swiper-container, 
 				.swiper-slide {
+					max-width: 612px;
 					width: 100%;
 				}
 

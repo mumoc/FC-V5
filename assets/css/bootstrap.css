@@ -5414,7 +5414,7 @@ h1, h2, h3, h4, h5 {
 
 #js-media-test {
   position: static; }
-  @media (max-width: 768px) {
+  @media (max-width: 769px) {
     #js-media-test {
       position: relative; } }
 
@@ -5892,6 +5892,8 @@ h1, h2, h3, h4, h5 {
     @media (max-width: 479px) {
       #sockstagram p {
         font-size: 16px; } }
+  .touch #sockstagram #sockstagram-pics {
+    display: hidden !important; }
   #sockstagram #sockstagram-pics {
     height: 950px;
     margin-top: 50px;
@@ -5959,12 +5961,14 @@ h1, h2, h3, h4, h5 {
   #sockstagram .sockstagram-15 {
     margin-top: 43%;
     left: 28%; }
+  .touch #sockstagram #sockstagram-gallery-hldr {
+    display: block !important; }
   #sockstagram #sockstagram-gallery-hldr {
     background-color: #f0f0ee;
     margin-top: 40px;
     padding-top: 8%;
     padding-bottom: 8%; }
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
       #sockstagram #sockstagram-gallery-hldr {
         display: none; } }
     #sockstagram #sockstagram-gallery-hldr p {
@@ -5993,6 +5997,7 @@ h1, h2, h3, h4, h5 {
     margin: 0 auto; }
   #sockstagram #sockstagram-gallery.swiper-container,
   #sockstagram #sockstagram-gallery .swiper-slide {
+    max-width: 612px;
     width: 100%; }
   #sockstagram #sockstagram-gallery img {
     max-width: 100%; }
