@@ -413,6 +413,21 @@
 			animation-timing-function: linear;
 		}
 
+		.anim-rise-asset-mobile {
+			-webkit-animation-name: rise-asset-mobile;
+			-webkit-animation-duration: 9s;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+			-moz-animation-name: rise-asset-mobile;
+			-moz-animation-duration: 9s;
+			-moz-animation-iteration-count: infinite;
+			-moz-animation-timing-function: linear;
+			animation-name: rise-asset-mobile;
+			animation-duration: 9s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+
 		@-webkit-keyframes rise-asset {
 			0% {
 				-webkit-transform: translate(0,1500px);
